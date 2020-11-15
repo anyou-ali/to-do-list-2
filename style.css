@@ -30,11 +30,105 @@ form input, form button{
 
 form button{
     color: #84a6f5;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover{
-    color: #3b6bda;
+    color: #3566d8;
 }
 
+.todo-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+/* todo div */
+.todo{
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.trash-btn, .complete-btn{
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: #70e000;
+}
+
+.trash-btn{
+    background: #c71f37;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    width: 10rem;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC"; /* triangle noir pointant vers le bas */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    background: #84a6f5;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #3566d8;
+}
+
+/* cursor pointer */
+form button,.trash-btn,.complete-btn,select{
+    cursor: pointer;
+}
