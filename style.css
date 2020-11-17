@@ -129,6 +129,6 @@ select{
 }
 
 /* cursor pointer */
-form button,.trash-btn,.complete-btn,select{
+/* form button,.trash-btn,.complete-btn,select{
     cursor: pointer;
-}
+} */
