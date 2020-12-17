@@ -96,7 +96,7 @@ function filterTodo(e){
                     todo.style.display = "none";
                 }
                 break;       
-        }
+        };
     });
 }
 
@@ -105,7 +105,7 @@ function filterTodo(e){
 function saveLocalTodos(todo){
     //checker si il y a des items existants
     let todos;
-    if(localStorage.getItem("todos") === ""){
+    if(localStorage.getItem("todos") === null){
         todos = [];
     }
     else{
@@ -119,12 +119,12 @@ function saveLocalTodos(todo){
 
 function getTodos(){
     let todos;
-    if(localStorage.getItem("todos") === ""){
+    if(localStorage.getItem("todos") === null){
         todos = [];
     }
     else{
         todos = JSON.parse(localStorage.getItem("todos"));
-    }
+    };
    
     todos.forEach(function(todo){
         // création de la todo div 
@@ -151,7 +151,8 @@ function getTodos(){
 
     // ajout de la todo-div à la todo-list
     todoList.appendChild(todoDiv);
-    }) 
+    });
+    
 }
 
 // function suppression des todos du localStorage
